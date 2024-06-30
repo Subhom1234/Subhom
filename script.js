@@ -10,7 +10,7 @@ function r1(){
 }
  
  
- function submit(){
+ function submit_laptop(){
  const scriptURL = 'https://script.google.com/macros/s/AKfycby-OWRrE7kYDqJ6a5vHVLkeyl69Mxkux0lIu1Eg4L3xFIcRmkUiV2E85x1uHSQoCldSiA/exec'
   const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
