@@ -496,7 +496,7 @@ input::placeholder {
   
     width: 98%;
     height: 100vh;
-    background-color: transparent;
+    background-color: black;
  }
  #contact_text_mobile{
    
