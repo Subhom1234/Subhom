@@ -436,6 +436,7 @@ input::placeholder {
 }
 .third_page_mobile{
     margin: 1%;
+    margin-left: 4%;
     width: 98%;
     height: 100vh;
     background-color: transparent;
