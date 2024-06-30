@@ -491,12 +491,12 @@ input::placeholder {
  #img_mobile:hover{
      transform: scale(1.1);
  }
- .contact_mobile{
+ #contact_mobile{
     margin: 2%;
   
     width: 98%;
     height: 100vh;
-    background-color: black;
+    background-color: transparent;
  }
  #contact_text_mobile{
    
