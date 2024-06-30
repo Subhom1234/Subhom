@@ -126,7 +126,7 @@
         <label for="Message">Feedback:</label>
         <input type="text" name="Message" placeholder="Feedback" id="Feedback" ><br><br>
         
-        <center><button type="submit" id="Submit">Submit</button></center>
+        <center><button type="submit"  onclick="submit()"  id="Submit">Submit</button></center>
     </form>
     <span id="msg"></span>
 </div>
@@ -254,7 +254,7 @@
     </contact>
   
     <!-- form -->
-    <form name="submit-to-google-sheet">
+   <form name="submit-to-google-sheet1">
         <label for="name">Name:</label><br>
         <input type="text" name="Name" placeholder="Name" required><br><br>
         <label for="email" >Email:</label><br>
@@ -262,9 +262,9 @@
         <label for="Message">Feedback:</label><br>
         <input type="text" name="Message" placeholder="Feedback" id="Feedback" ><br><br>
         
-        <center><button type="submit" id="Submit">Submit</button></center>
+        <center><button onclick="submit_mobile()" id="Submit">Submit</button></center>
     </form>
-    <span id="msg"></span>
+    <span id="msg1"></span>
  
 
     </div>
