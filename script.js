@@ -8,7 +8,11 @@ function r1(){
   document.getElementById('menu_mobile').style.display = 'none';
  
 }
+function menu_mobile(){
+  document.getElementById('menue_btn_mobile').style.display = 'block';
+  document.getElementById('menu_mobile').style.display = 'none';
  
+}
  
  function submit_laptop(){
  const scriptURL = 'https://script.google.com/macros/s/AKfycby-OWRrE7kYDqJ6a5vHVLkeyl69Mxkux0lIu1Eg4L3xFIcRmkUiV2E85x1uHSQoCldSiA/exec'
