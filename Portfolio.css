@@ -526,7 +526,7 @@ input::placeholder {
 }
 #dp2_mobile{
     margin-top: 5vh;
-    margin-left: 15%;
+    
     width: 200px;
     height: 200px;
     border-radius: 250px;
@@ -536,7 +536,7 @@ input::placeholder {
 }
 #text2_mobile{
    margin-top: 40vh;
-    margin-left: 25%;
+   
      position: absolute;
      color: black;
      font-size: 34px;
