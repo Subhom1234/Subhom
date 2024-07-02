@@ -17,7 +17,7 @@
        
 
         <font color="red"><b>Frontend</b></font><br>
-        <b>Web Developer</b> <br><br>
+        <b><span class="auto-type"></span></b> <br><br>
         <b>Hi, I am</b> <br><font color="red"><b>Subhom Kole</b></font> <br><b>From India</b>
     </div>  
   
@@ -153,7 +153,7 @@
     
         <div id="text_mobile">
             <font color="red"><b>Frontend</b></font><br>
-            <b>Web Developer</b> <br><br>
+            <b><span class="auto-type_mobile"></span></b> <br><br>
             <b>Hi, I am</b> <br><font color="red"><b>Subhom Kole</b></font> <br><b>From India</b>
         
         </div>
@@ -286,6 +286,24 @@
    
    </div>
    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+   <script>
+     var typed = new Typed(".auto-type",{
+       strings : ["Web Developer","Programmer", "Designer", "Frontend Developer", "Fullstack Developer"],
+       typeSpeed : 150,
+       backSpeed : 150,
+       looped : true
+     })
+   </script>
+    <script>
+        var typed = new Typed(".auto-type_mobile",{
+          strings : ["Web Developer","Programmer", "Designer", "Frontend Developer", "Fullstack Developer"],
+          typeSpeed : 150,
+          backSpeed : 150,
+          looped : true
+        })
+      </script>
 </body>
 
 </html>
