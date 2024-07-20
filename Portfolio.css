@@ -181,18 +181,11 @@ margin-left: 35%;
 }
 #info2{
      height: 80vh;
-    width: 50%;
+    width: 80%;
     font-size: 34px;
    
 }
-#info3{
-  
-    margin-left: 1%;
-   
-    height: 80vh;
-    width: 40%;
-    font-size: 34px;
-}
+
 #skills{
   
     text-align: center;
