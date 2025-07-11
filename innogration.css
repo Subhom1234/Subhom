@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  /* background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e); */
+  background-color: black;
+  background-image: url('Screenshot 2025-07-11 at 9.06.53 PM.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Background Animation */
+.background-animation::before {
+  content: "";
+  background: url('https://cdn.pixabay.com/photo/2016/12/06/18/27/shopping-1880941_1280.png') repeat;
+  opacity: 0.05;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  animation: slideBackground 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes slideBackground {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+/* Inauguration Box */
+.enter {
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 50px 70px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.15);
+  border: 2px solid #0ff;
+  animation: fadeIn 1s ease-in-out, pulseBorder 2s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseBorder {
+  0% { box-shadow: 0 0 15px #00f0ff; }
+  100% { box-shadow: 0 0 30px #00f0ff; }
+}
+
+.glow-heading {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #0ff; }
+  100% { text-shadow: 0 0 30px #00ffff, 0 0 60px #0ff; }
+}
+
+.brand-name {
+  color: gold;
+  font-weight: 700;
+}
+
+.tagline {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #ffeaa7;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.inaugurated-by {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+.entry-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.entry-btn:hover {
+  background: #00c3cc;
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.enter {
+  position: relative; /* make it the positioning context for absolute children */
+}
+
+.powered-by {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 0.8rem;
+  color: #ccc;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.powered-by a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+.powered-by a:hover {
+  text-decoration: underline;
+}

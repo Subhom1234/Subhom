@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arrotic Shop Inauguration</title>
+  <link rel="stylesheet" href="innogration.css" />
+</head>
+<body>
+
+  <!-- Background Animation -->
+  <div class="background-animation"></div>
+
+  <!-- Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Inauguration Box -->
+  <div class="enter" id="enterBox">
+    <h1 class="glow-heading">🎉 Grand Inauguration of <br> <span class="brand-name">Arrotic.Shop</span></h1>
+    <p class="tagline">Your Royal DIY Arduino Destination</p>
+    <div id="countdown">--:--</div>
+    <p class="inaugurated-by">Inaugurated by <strong>Subhom Kole</strong> 🏆</p>
+    <button onclick="window.location.href='https://arrotic.kesug.com'" class="entry-btn">Enter Now</button>
+    <div class="powered-by">Powered by <a href="https://subhom1234.kesug.com" target="_blank">Subhom.kesug.com</a></div>
+  </div>
+
+  <!-- Hidden launch time and date -->
+  <p id="targetTime" style="display:none;">20:46:20</p>
+  <p id="targetDate" style="display:none;">2025-07-12</p>
+
+  <script src="confetti.min.js"></script> <!-- Load external confetti library -->
+  <script>
+    const countdownEl = document.getElementById("countdown");
+    const timeStr = document.getElementById("targetTime").innerText.trim();
+    const dateStr = document.getElementById("targetDate").innerText.trim();
+    const targetISO = dateStr + "T" + timeStr + "+05:30";
+    const endTime = new Date(targetISO).getTime();
+    const enterBox = document.getElementById("enterBox");
+    const redirectURL = "https://arrotic.kesug.com";
+    const countdownKey = `ended-${dateStr}-${timeStr}`;
+
+    if (localStorage.getItem(countdownKey) === "true") {
+      enterBox.style.display = "none";
+    } else {
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const remaining = endTime - now;
+
+        if (remaining <= 0) {
+          countdownEl.textContent = "00:00";
+          clearInterval(timer);
+          localStorage.setItem(countdownKey, "true");
+          enterBox.classList.add("fade-out");
+
+          setTimeout(() => {
+            enterBox.style.display = "none";
+            window.location.href = redirectURL;
+          }, 1000);
+
+          setTimeout(() => {
+            localStorage.removeItem(countdownKey);
+            location.reload();
+          }, 60000);
+
+          return;
+        }
+
+        const minutes = Math.floor((remaining / 1000 / 60) % 60);
+        const seconds = Math.floor((remaining / 1000) % 60);
+        countdownEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      }
+
+      updateCountdown();
+      const timer = setInterval(updateCountdown, 1000);
+    }
+
+    // Confetti
+    const confettiSettings = { target: 'confetti-canvas' };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+  </script>
+
+</body>
+</html>
